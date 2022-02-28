@@ -22,4 +22,20 @@ The goal is create an api that made authentication with `Name` and `Email` to be
     <td>{ name: string, email: string }</td>
     <td>{ app: { id: number, name: string, email: string }, token: string }</td>
   </tr>
+  <!-- Generate Token -->
+  <tr>
+    <td>POST</td>
+    <td>/generate-token</td>
+    <td>null</td>
+    <td>{ email: string }</td>
+    <td>{ token: string }</td>
+  </tr>
+  <!-- Revoke Token -->
+  <tr>
+    <td>DELETE</td>
+    <td>/revoke-token</td>
+    <td>{ Authorization: Bearer `token` }</td>
+    <td>null</td>
+    <td>null</td>
+  </tr>
 </table>
