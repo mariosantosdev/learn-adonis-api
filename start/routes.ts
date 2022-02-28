@@ -26,4 +26,5 @@ Route.get("/", async () => {
 
 Route.post("/register", "AppsController.create");
 
+Route.post("/generate-token", "TokensController.generate");
 Route.delete("/revoke-token", "TokensController.revoke");
