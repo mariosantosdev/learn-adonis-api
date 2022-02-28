@@ -9,7 +9,7 @@ export default class AppsController {
     email: schema.string.nullable(),
   });
 
-  public async create({ response, request }: HttpContextContract) {
+  public async create({ auth, response, request }: HttpContextContract) {
     const { name, email } = await request.validate({
       schema: this.schema,
       messages: {
@@ -27,6 +27,8 @@ export default class AppsController {
 
     const app = await AppModel.create({ name, email });
 
-    return { app };
+    const { token } = await auth.use("api").generate(app, { name });
+
+    return { app, token };
   }
 }
