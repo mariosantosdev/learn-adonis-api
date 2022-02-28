@@ -23,7 +23,7 @@ export default class AppsController {
     const emailAlreadyExist = await AppModel.findBy("email", email);
 
     if (emailAlreadyExist)
-      return response.badRequest("This email already exist in athoter app.");
+      return response.badRequest("This email already exist in another app.");
 
     const app = await AppModel.create({ name, email });
 
