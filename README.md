@@ -47,3 +47,26 @@ The goal is create an api that made authentication with `Name` and `Email` to be
     <td>{ name: string, username: string, email: string, phone: string, image: string, address: { street: string, state: string, country: string } }</td>
   </tr>
 </table>
+
+## Using locally
+
+1. Firstly, clone the repository to your computer<br/>
+`git clone https://github.com/mariosantosdev/learn-adonis-api.git`
+
+2. Open the folder of project<br/>
+`cd learn-adonis-api`
+
+3. Install all dependencies<br/>
+```bash
+  # Remember use node version v14
+  npm install
+  
+  # or yarn install
+```
+
+4. Change the filename `.env.example` to `.env`
+
+5. Setup the SQLite database executing <br/>
+`node ace migration:run`
+
+6. Run the application with `npm run dev`
