@@ -38,4 +38,12 @@ The goal is create an api that made authentication with `Name` and `Email` to be
     <td>null</td>
     <td>null</td>
   </tr>
+  <!-- Generate People -->
+  <tr>
+    <td>POST</td>
+    <td>/generate-people</td>
+    <td>{ Authorization: Bearer `token` }</td>
+    <td>null</td>
+    <td>{ name: string, username: string, email: string, phone: string, image: string, address: { street: string, state: string, country: string } }</td>
+  </tr>
 </table>

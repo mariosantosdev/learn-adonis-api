@@ -30,3 +30,5 @@ Route.post("/generate-token", "TokensController.generate");
 Route.delete("/revoke-token", "TokensController.revoke")
   .middleware("auth:api");
 
+Route.get("/generate-people", "GeneratePeopleController.generate")
+  .middleware("auth:api");
