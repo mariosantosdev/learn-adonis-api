@@ -26,12 +26,7 @@ export default class TokensController {
     return { token };
   }
 
-  public async revoke({ auth, response }: HttpContextContract) {
-    await auth.use("api").authenticate();
-
-    if (!auth.use("api").user)
-      return response.unauthorized("Token has not informed.");
-
+  public async revoke({ auth }: HttpContextContract) {
     await auth.use("api").revoke();
   }
 }
